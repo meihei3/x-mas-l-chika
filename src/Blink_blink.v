@@ -31,7 +31,7 @@ module Blink_blink
   assign blink_main_bz_i_inl14 = (blink_main_bz_i_inl13 + 1);
   assign blink_main_bz_led_bit3 = (1 - blink_main_bz_led_bit2);
   assign blink_main_bz_t530_inl1 = (interval / 2);
-  assign interval = 10;
+  assign interval = 16;
   
   always @(posedge clk) begin
     if (rst) begin

@@ -20,4 +20,4 @@ class Blink:
         for i in range(self.interval // 2):
             pass
 
-blink = Blink(10)
+blink = Blink(16)
