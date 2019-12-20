@@ -19,7 +19,15 @@ module Blinks_blinks
     output reg led14 = 0,
     output reg led15 = 0,
     output reg led16 = 0,
-    output reg led17 = 0
+    output reg led17 = 0,
+    output reg led20 = 0,
+    output reg led21 = 0,
+    output reg led22 = 0,
+    output reg led23 = 0,
+    output reg led24 = 0,
+    output reg led25 = 0,
+    output reg led26 = 0,
+    output reg led27 = 0
   );
 
   //localparams
@@ -45,29 +53,37 @@ module Blinks_blinks
   localparam Blinks_blinks_main_c0_L1_while2_S16 = 19;
   localparam Blinks_blinks_main_c0_L1_while2_S17 = 20;
   localparam Blinks_blinks_main_c0_L1_while2_S18 = 21;
-  localparam Blinks_blinks_main_c0_L1_forelse6_S0 = 22;
-  localparam Blinks_blinks_main_c0_L1_forelse6_S1 = 23;
-  localparam Blinks_blinks_main_c0_L2_fortest4_S0 = 24;
-  localparam Blinks_blinks_main_c0_L2_forbody5_S0 = 25;
-  localparam Blinks_blinks_main_c0_L2_forbody5_S1 = 26;
+  localparam Blinks_blinks_main_c0_L1_while2_S19 = 22;
+  localparam Blinks_blinks_main_c0_L1_while2_S20 = 23;
+  localparam Blinks_blinks_main_c0_L1_while2_S21 = 24;
+  localparam Blinks_blinks_main_c0_L1_while2_S22 = 25;
+  localparam Blinks_blinks_main_c0_L1_while2_S23 = 26;
+  localparam Blinks_blinks_main_c0_L1_while2_S24 = 27;
+  localparam Blinks_blinks_main_c0_L1_while2_S25 = 28;
+  localparam Blinks_blinks_main_c0_L1_while2_S26 = 29;
+  localparam Blinks_blinks_main_c0_L1_forelse6_S0 = 30;
+  localparam Blinks_blinks_main_c0_L1_forelse6_S1 = 31;
+  localparam Blinks_blinks_main_c0_L2_fortest4_S0 = 32;
+  localparam Blinks_blinks_main_c0_L2_forbody5_S0 = 33;
+  localparam Blinks_blinks_main_c0_L2_forbody5_S1 = 34;
   
   //signals: 
-  wire blinks_main_c0_c556_inl3;
+  wire blinks_main_c0_c564_inl3;
   wire blinks_main_c0_switch_result1;
   wire blinks_main_c0_switch_result2;
   reg blinks_main_c0_led_bit_ptn02;
   reg blinks_main_c0_led_bit_ptn12;
-  reg        [4:0] blinks_main_c0_state;
+  reg        [5:0] blinks_main_c0_state;
   wire signed [31:0] blinks_main_c0_i_inl34;
-  wire signed [31:0] blinks_main_c0_t554_inl3;
+  wire signed [31:0] blinks_main_c0_t562_inl3;
   wire signed [31:0] interval;
   reg signed [31:0] blinks_main_c0_i_inl33;
   //combinations: 
-  assign blinks_main_c0_c556_inl3 = (blinks_main_c0_i_inl33 < blinks_main_c0_t554_inl3);
+  assign blinks_main_c0_c564_inl3 = (blinks_main_c0_i_inl33 < blinks_main_c0_t562_inl3);
   assign blinks_main_c0_i_inl34 = (blinks_main_c0_i_inl33 + 1);
   assign blinks_main_c0_switch_result1 = (1 - blinks_main_c0_led_bit_ptn02);
   assign blinks_main_c0_switch_result2 = (1 - blinks_main_c0_led_bit_ptn12);
-  assign blinks_main_c0_t554_inl3 = interval;
+  assign blinks_main_c0_t562_inl3 = interval;
   assign interval = 49999996;
   
   always @(posedge clk) begin
@@ -93,6 +109,14 @@ module Blinks_blinks
       led15 <= 0;
       led16 <= 0;
       led17 <= 0;
+      led20 <= 0;
+      led21 <= 0;
+      led22 <= 0;
+      led23 <= 0;
+      led24 <= 0;
+      led25 <= 0;
+      led26 <= 0;
+      led27 <= 0;
       blinks_main_c0_state <= Blinks_blinks_main_c0_b1_INIT;
     end else begin //if (rst)
       case(blinks_main_c0_state)
@@ -105,7 +129,7 @@ module Blinks_blinks
         led00 <= blinks_main_c0_led_bit_ptn02;
         /* blinks_main_c0_switch_result1 <= (1 - blinks_main_c0_led_bit_ptn02); */
         /* blinks_main_c0_switch_result2 <= (1 - blinks_main_c0_led_bit_ptn12); */
-        /* blinks_main_c0_t554_inl3 <= interval; */
+        /* blinks_main_c0_t562_inl3 <= interval; */
         blinks_main_c0_i_inl33 <= 0;
         blinks_main_c0_state <= Blinks_blinks_main_c0_L1_while2_S1;
       end
@@ -175,11 +199,43 @@ module Blinks_blinks
       end
       Blinks_blinks_main_c0_L1_while2_S17: begin
         led17 <= blinks_main_c0_led_bit_ptn12;
+        blinks_main_c0_state <= Blinks_blinks_main_c0_L1_while2_S18;
+      end
+      Blinks_blinks_main_c0_L1_while2_S18: begin
+        led20 <= blinks_main_c0_led_bit_ptn02;
+        blinks_main_c0_state <= Blinks_blinks_main_c0_L1_while2_S19;
+      end
+      Blinks_blinks_main_c0_L1_while2_S19: begin
+        led21 <= blinks_main_c0_led_bit_ptn12;
+        blinks_main_c0_state <= Blinks_blinks_main_c0_L1_while2_S20;
+      end
+      Blinks_blinks_main_c0_L1_while2_S20: begin
+        led22 <= blinks_main_c0_led_bit_ptn02;
+        blinks_main_c0_state <= Blinks_blinks_main_c0_L1_while2_S21;
+      end
+      Blinks_blinks_main_c0_L1_while2_S21: begin
+        led23 <= blinks_main_c0_led_bit_ptn12;
+        blinks_main_c0_state <= Blinks_blinks_main_c0_L1_while2_S22;
+      end
+      Blinks_blinks_main_c0_L1_while2_S22: begin
+        led24 <= blinks_main_c0_led_bit_ptn02;
+        blinks_main_c0_state <= Blinks_blinks_main_c0_L1_while2_S23;
+      end
+      Blinks_blinks_main_c0_L1_while2_S23: begin
+        led25 <= blinks_main_c0_led_bit_ptn12;
+        blinks_main_c0_state <= Blinks_blinks_main_c0_L1_while2_S24;
+      end
+      Blinks_blinks_main_c0_L1_while2_S24: begin
+        led26 <= blinks_main_c0_led_bit_ptn02;
+        blinks_main_c0_state <= Blinks_blinks_main_c0_L1_while2_S25;
+      end
+      Blinks_blinks_main_c0_L1_while2_S25: begin
+        led27 <= blinks_main_c0_led_bit_ptn12;
         blinks_main_c0_state <= Blinks_blinks_main_c0_L2_fortest4_S0;
       end
       Blinks_blinks_main_c0_L2_fortest4_S0: begin
-        /* blinks_main_c0_c556_inl3 <= (blinks_main_c0_i_inl33 < blinks_main_c0_t554_inl3); */
-        if (blinks_main_c0_c556_inl3) begin
+        /* blinks_main_c0_c564_inl3 <= (blinks_main_c0_i_inl33 < blinks_main_c0_t562_inl3); */
+        if (blinks_main_c0_c564_inl3) begin
           /* blinks_main_c0_i_inl34 <= (blinks_main_c0_i_inl33 + 1); */
           blinks_main_c0_i_inl33 <= blinks_main_c0_i_inl34;
           blinks_main_c0_state <= Blinks_blinks_main_c0_L2_fortest4_S0;
